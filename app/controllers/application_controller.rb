@@ -1,5 +1,6 @@
 require "./config/environment"
 require "./app/models/post"
+require "./app/mosels/users"
 
 class ApplicationController < Sinatra::Base
   
@@ -9,13 +10,15 @@ class ApplicationController < Sinatra::Base
   end
   
   get "/" do
+    @users= User.all
     @all_posts = Post.all
     puts @all_posts
     erb :index   
 end
   
   post '/new_post' do
-    Post.create({:username => params[:username], :picture => params[:picture], :caption => params[:caption]})
-    redirect to '/'
+    @post=Post.new({:user_id => params[:user_id], :picture => params[:picture], :caption => params[:caption]})
+    @post.save   
+    redirect "/"
   end
 end
