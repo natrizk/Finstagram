@@ -17,11 +17,11 @@
   <input type= "submit" value= "Post">
 </form>
     <h2>Newsfeed</h2>
-   <ul>
+   <h3><ul>
      <% @all_posts.each do |post| %>
      <li>Username: <%= post.username %> - Picture:<div class = "container"> <img src= <%= post.picture %>> </div> - Caption: <%= post.caption %></li>
      <% end %>
-   </ul>
+     </ul></h3>
  
    </center>
  </body>
