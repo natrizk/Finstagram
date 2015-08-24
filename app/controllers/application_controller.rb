@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/new_post' do
-    @post=Post.new({:user_id => params[:user_id], :picture => params[:picture], :caption => params[:caption]})
+    @post=Post.new({:user_id => session[:user_id], :picture => params[:picture], :caption => params[:caption]})
     @post.save   
     redirect "/"
   end

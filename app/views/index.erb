@@ -28,7 +28,7 @@
    <h3><ul>
     
      <% @posts.each do |post| %>
-     <li>Username: <%= post.username %> - Picture:<div class = "container"> <img src= <%= post.picture %> </div> - Caption: <%= post.caption %></li> 
+     <li>Username: <%= post.user.username %> - Picture:<div class = "container"> <img src= <%= post.picture %> </div> - Caption: <%= post.caption %></li> 
      <% end %>
      </ul></h3>
 -->  
