@@ -16,6 +16,8 @@
         <a href="/login">Login</a> or <a href="/users">sign up</a> to use Finstagram!
       <% end %>
 
+      <%= yield %>
+
 <!--     </div>
       <form action = "/new_post" method= "POST">
   <input type= "text" name= "username" placeholder= "Username">
@@ -26,8 +28,9 @@
 </form>
     <h2>Newsfeed</h2>
    <h3><ul>
-     <% @posts.each do |post| %>
-     <li>Username: <%= post.username %> - Picture:<div class = "container"> <img src= <%= post.picture %>> </div> - Caption: <%= post.caption %></li>
+    
+     <% @all_posts.each do |post| %>
+     <li>Username: <%= post.username %> - Picture:<div class = "container"> <img src= <%= post.picture %>> </div> - Caption: <%= post.caption %></li> 
      <% end %>
      </ul></h3>
  
