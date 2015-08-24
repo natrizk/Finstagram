@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/users' do
-    new_user = User.new(:username => params[:username], :email => params[:email])
+    new_user = User.new(:username => params[:username], :email => params[:email],:profile_pic => params[:profile_pic])
     new_user.save
     session[:user_id] = new_user.id
     redirect ('/users')

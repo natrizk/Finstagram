@@ -1,0 +1,14 @@
+<h3>Posts</h3>
+<% @posts.each do |tweet| %>
+  <p><strong><%=post.user.username %></strong> - <%= post.message %></p>
+<% end %>
+
+<% if session[:user_id] %>
+  <h3>Post a Picture</h3>
+  <form action="/posts" method="POST">
+    <input type="hidden" name="user_id" value=<%= session[:user_id] %>>
+
+    Message: <input class="form-control" type="text" name="message">
+    <input type="submit" class="btn btn-default">
+  </form>
+<% end %>
