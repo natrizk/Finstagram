@@ -1,6 +1,6 @@
 require "./config/environment"
 require "./app/models/post"
-require "./app/mosels/users"
+require "./app/models/user"
 require "pry"
 
 class ApplicationController < Sinatra::Base
