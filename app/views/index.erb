@@ -15,7 +15,7 @@
       <% else %>
         <a href="/login">Login</a> or <a href="/users">sign up</a> to use Finstagram!
       <% end %>
-
+<h2>
     </div>
 <!--       <form action = "/new_post" method= "POST">
   <input type= "text" name= "username" placeholder= "Username">
@@ -23,14 +23,14 @@
 <!--  <input type= "file" name= "picture" accept= "image/*" placeholder= "Upload your picture"> -->
   <input type= "text" name= "caption" placeholder= "Caption">
   <input type= "submit" value= "Post">
-</form>
-    <h2>Newsfeed</h2>
-   <h3><ul>
+        </form></h2>
+    <h3>Newsfeed</h3>
+   <h4><ul>
     
      <% @posts.each do |post| %>
      <li>Username: <%= post.user.username %> - Picture:<div class = "container"> <img src= <%= post.picture %> </div> - Caption: <%= post.caption %></li> 
      <% end %>
-     </ul></h3>
+     </ul></h4>
 -->  
   </center>
  </body>
